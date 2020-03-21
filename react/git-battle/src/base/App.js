@@ -1,22 +1,18 @@
 import React from 'react';
 import './App.css';
 
-import PrimaryButton from '../components/primaryButton';
-
-
+import Header from '../components/header'
+import MainContent from '../components/mainSection'
+import Footer from '../components/footer'
 class App extends React.Component {
   render() {
+    let arr = [`option1`,`option2`,`option3`];
     return (
       <main>
-        <nav>
-         
-        </nav>
-
-        <div className="container">
-        <PrimaryButton  type="Primary" bgColor='green' ></PrimaryButton>
-          <PrimaryButton type="Second" bgColor='#E1C71D' textColor="black"></PrimaryButton>
-          <PrimaryButton type="Warning" bgColor='red'></PrimaryButton>
-        </div>
+       <Header></Header>
+      <MainContent elemente={arr}></MainContent>
+      <Footer></Footer>
+      
       </main>
     )
   }
